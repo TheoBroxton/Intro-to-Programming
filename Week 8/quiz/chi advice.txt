@@ -1,0 +1,7 @@
+Reading in the data can be done using loops as we have done previously. It is best stored as a numpy array for the data to be compatible with other parts of the code. 
+
+Filtering strings is simple and can be done in a variety of ways. So far, we have used try-except blocks testing if the input can be floated.
+
+The third data set contains outliers. Here we must apply a filter based on an initial line of best fit (as there are only a few of them this is valid). We discard those whose residual is greater than a multiple of that data point's standard deviation. To break it up into individual steps you can use a combination of np.where(), np.unique() and np.delete(). The multiple we choose is based on the number of data points present.
+
+As for the hard-coded issues, we need to adjust the fitting parameters so that the procedure does not time out. We also need to ensure the reduced chi square is being calculated correctly.
